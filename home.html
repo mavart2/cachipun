@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachipun</title>
+
+    <style>
+        html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+      body {
+        font-family: Arial, sans-serif;
+        /*background: #eaeaea;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./img/image.png');
+        background-size: cover;      /* para que se vea completa */
+        background-position: center; /* centrada */
+        background-repeat: no-repeat; /* que no se repita */
+      }
+      h1 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background: linear-gradient(90deg, rgb(223, 10, 110), rgb(13, 95, 143));
+         -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        padding-top: 5%;
+        margin-bottom: 50px;
+      }
+      .botones {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      button {
+        font-size: 20px;
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+
+      #resultado, #marcador {
+        font-size: 22px;
+        margin-top: 20px;
+      }
+      #pc, #jugador {
+        font-size: 28px;
+        margin-top: 10px;
+      }
+      .fondo{
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgba(234, 234, 234, 0.4); /* transparencia */
+        background-blend-mode: lighten; /* mezcla sutil */
+
+      }
+    </style>
+</head>
+
+<body>
+
+<h1> · ¡Juguemos al Cachipún!  · </h1>
+
+<div class="botones">
+    <button class="btn-jugada" onclick="jugar(1)">🪨 Piedra</button>
+    <button class="btn-jugada" onclick="jugar(2)">📄 Papel</button>
+    <button class="btn-jugada" onclick="jugar(3)">✂️ Tijera</button>
+</div>
+
+<div class="fondo">
+    <div id="jugador"></div>
+    <div id="pc"></div>
+    <div id="resultado"></div>
+
+<div id="marcador">Ganaste: 0 · Perdiste: 0</div>
+</div>
+
+<button id="reiniciar" onclick="reiniciarJuego()" style="display:none; margin-top: 50px;">
+    🔄 Reiniciar juego
+</button>
+
+
+<script src="./assets/script.js"></script>
+</body>
+</html>
